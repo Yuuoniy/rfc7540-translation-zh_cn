@@ -2,7 +2,7 @@
 
 > Error codes are 32-bit fields that are used in RST_STREAM and GOAWAY   frames to convey the reasons for the stream or connection error.
 
-错误码是32位字段，用在`RST_STREAM`和超时帧中去标识流或者连接错误的原因。
+错误码是 32 位字段，用在`RST_STREAM`和超时帧中去标识流或者连接错误的原因。
 
 > Error codes share a common code space.  Some error codes apply only   to either streams or the entire connection and have no defined   semantics in the other context.
 
@@ -31,13 +31,13 @@
 + **PROTOCOL_ERROR (0x1)**： 终端检测到一个不确定性质的协议错误。 这个错误码用在一个更加确切的错误码不可用的情况下。
 + **INTERNAL_ERROR (0x2)**： 终端遇到了一个意外的内部错误。
 + **FLOW_CONTROL_ERROR (0x3)**： 终端检测到对等端违背了流量控制协议。
-+ **SETTINGS_TIMEOUT (0x4)**： 终端发送了一个设置帧，但是没有在指定时间内得到响应。 [参见Section 6.5.3 ("Settings Synchronization")](https://tools.ietf.org/html/rfc7540#section-6.5.3)。 
++ **SETTINGS_TIMEOUT (0x4)**： 终端发送了一个设置帧，但是没有在指定时间内得到响应。 [参见 Section 6.5.3 ("Settings Synchronization")](https://tools.ietf.org/html/rfc7540#section-6.5.3)。 
 + **STREAM_CLOSED (0x5)**： 终端在流的半封闭状态接收到了帧。
 + **FRAME_SIZE_ERROR (0x6)**： 终端接收到一个超出最大尺寸的帧。
-+ **REFUSED_STREAM (0x7)**： 终端拒绝流之前执行了程序处理。 [参见Section 8.1.4](https://tools.ietf.org/html/rfc7540#section-8.1.4)。
++ **REFUSED_STREAM (0x7)**： 终端拒绝流之前执行了程序处理。 [参见 Section 8.1.4](https://tools.ietf.org/html/rfc7540#section-8.1.4)。
 + **CANCEL (0x8)**: 标识这个流不再是需要的。
 + **COMPRESSION_ERROR (0x9)**： 终端无法维护报头压缩上下文的连接。
-+ **CONNECT_ERROR (0xa)**： 为响应一个连接请求的而建立的连接[参见：Section 8.3](https://tools.ietf.org/html/rfc7540#section-8.3)被重置或者异常关闭。
++ **CONNECT_ERROR (0xa)**： 为响应一个连接请求的而建立的连接 [参见：Section 8.3](https://tools.ietf.org/html/rfc7540#section-8.3) 被重置或者异常关闭。
 + **ENHANCE_YOUR_CALM (0xb)**： 终端检测到其对等端的某行为可能负荷超载。
 + **INADEQUATE_SECURITY (0xc)**： 底层传输特性不符合最低安全要求。 [参见 Section 9.2](https://tools.ietf.org/html/rfc7540#section-9.2)。
 + **HTTP_1_1_REQUIRED (0xd)**： 终端应该使用`HTTP/1.1`, 而不是`HTTP/2`。
